@@ -9,15 +9,14 @@ This repository contains the complete UVM testbench and design files for verifyi
 ### 1. Project Reports
 
 - `Yousef_Alkattan_Project2_sv7....`:  
-  Likely a backup or exported version of the project or design. Consider renaming or organizing.
-
+  Includes all codes & Simulation Waveforms
 
 ---
 
 ### 2. RTL & Test Top
 
 - `FIFO.sv`:  
-  The RTL design of the FIFO module under test.
+  The RTL design of the FIFO module under test & also includes Assertions.
 
 - `FIFO2_top.sv`:  
   Top-level testbench module that instantiates the DUT, interface, and connects the UVM environment.
@@ -52,6 +51,9 @@ This repository contains the complete UVM testbench and design files for verifyi
 - `fifo_test.sv`:  
   Top-level UVM test class that configures and starts the test.
 
+- `FIFO_coverage.sv`:  
+  Includes functional coverage groups to measure test completeness. 
+
 #### Sequences
 
 - `fifo_sequence_item.sv`:  
@@ -66,8 +68,6 @@ This repository contains the complete UVM testbench and design files for verifyi
 - `fifo_sequencer.sv`:  
   UVM sequencer responsible for controlling the flow of transaction items.
 
-- `FIFO_coverage.sv`:  
-  Includes functional coverage groups to measure test completeness.
 
 ---
 
