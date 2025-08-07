@@ -52,7 +52,7 @@ This repository contains the complete UVM testbench and design files for verifyi
 - `fifo_test.sv`:  
   Top-level UVM test class that configures and starts the test.
 
-#### 🎬 Sequences
+#### Sequences
 
 - `fifo_sequence_item.sv`:  
   Defines the transaction type (data packet) for FIFO operations.
@@ -68,14 +68,14 @@ This repository contains the complete UVM testbench and design files for verifyi
 
 ---
 
-### 📈 Coverage & Assertions
+### Coverage & Assertions
 
 - `FIFO_coverage.sv`:  
   Includes functional coverage groups to measure test completeness.
 
 ---
 
-### 🧪 Simulation & Compilation
+### 4. Do file & List of files
 
 - `doffio2.do`:  
   ModelSim/Questa `.do` script for compiling and running the simulation.
