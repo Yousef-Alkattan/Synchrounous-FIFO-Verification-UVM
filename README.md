@@ -66,10 +66,6 @@ This repository contains the complete UVM testbench and design files for verifyi
 - `fifo_sequencer.sv`:  
   UVM sequencer responsible for controlling the flow of transaction items.
 
----
-
-### Coverage & Assertions
-
 - `FIFO_coverage.sv`:  
   Includes functional coverage groups to measure test completeness.
 
