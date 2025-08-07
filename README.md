@@ -4,6 +4,37 @@ This repository contains the complete UVM testbench and design files for verifyi
 
 ---
 
+## 🔷 Introduction
+
+This project presents a **Universal Verification Methodology (UVM)**-based testbench for verifying a **synchronous FIFO (First-In, First-Out)** buffer.  
+FIFO is a critical component in digital systems, acting as a temporary storage queue that manages data transfer between modules operating on different clock domains or execution rates.
+
+Our design features multiple control and status signals such as `full`, `almostfull`, `empty`, `almostempty`, `overflow`, and `underflow`, ensuring safe and efficient data communication.
+
+The verification framework rigorously tests these features using structured UVM components like sequences, agents, drivers, monitors, and scoreboards to provide **comprehensive functional coverage**.
+
+---
+
+## FIFO Input/Output Ports
+
+| **Port**       | **Direction** | **Description**                                                                 |
+|----------------|---------------|---------------------------------------------------------------------------------|
+| `clk`          | Input         | Clock signal for synchronous operations                                        |
+| `rst_n`        | Input         | Active-low asynchronous reset                                                  |
+| `data_in`      | Input         | Input data to be written into the FIFO                                         |
+| `wr_en`        | Input         | Write enable — data is written when high and FIFO is not full                 |
+| `rd_en`        | Input         | Read enable — data is read when high and FIFO is not empty                    |
+| `data_out`     | Output        | Data read from the FIFO                                                        |
+| `full`         | Output        | Indicates FIFO is full — prevents further writes                               |
+| `almostfull`   | Output        | Indicates FIFO is almost full — one write away from being full                 |
+| `empty`        | Output        | Indicates FIFO is empty — prevents further reads                               |
+| `almostempty`  | Output        | Indicates FIFO is almost empty — one read away from being empty                |
+| `overflow`     | Output        | Signals an overflow event — write attempted when FIFO is full                  |
+| `underflow`    | Output        | Signals an underflow event — read attempted when FIFO is empty                 |
+| `wr_ack`       | Output        | Acknowledges that the write was successful                                     |
+
+---
+
 ## 📁 File Descriptions
 
 ### 1. Project Reports
@@ -89,7 +120,12 @@ This repository contains the complete UVM testbench and design files for verifyi
 
 ---
 
-## ✅ Summary
+## Conclusion
 
-This project demonstrates a complete UVM testbench flow for verifying a FIFO design, including modular components, coverage collection, and simulation scripting.
+The UVM-based verification environment for the FIFO buffer has proven successful in ensuring **design correctness, protocol compliance, and data integrity** across a wide range of functional scenarios.  
+This includes edge cases like simultaneous read/write operations, resets during transactions, and overflow/underflow events.
+
+Through the use of **SystemVerilog Assertions**, **Golden reference models**, and **UVM sequences**, we’ve implemented a reusable and scalable testbench that achieves high confidence in the FIFO's reliability for integration into larger digital systems.
+
+This project reflects best practices in functional verification and demonstrates the value of **automated, structured verification methodologies** like UVM in modern digital design flows.
 
